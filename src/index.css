@@ -1,0 +1,11 @@
+@import url('./vendor/reset.css');
+
+@import url('./vendor/fonts/fonts.css');
+
+:root {
+  --color-white: #fff;
+  --color-button-light: #03BCDB;
+  --color-button-darker: #363681;
+
+  --maxWidthContainer1120: 1120px;
+}
