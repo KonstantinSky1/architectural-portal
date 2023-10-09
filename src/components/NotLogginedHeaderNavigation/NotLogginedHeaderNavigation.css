@@ -1,0 +1,20 @@
+.notLogginedHeaderNavigation {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.notLogginedHeaderNavigation-login-link {
+  background-color: var(--color-buttonBg-light);
+  width: 168px;
+  height: 50px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.notLogginedHeaderNavigation-register-link {
+  background-color: var(--color-buttonBg-darker);
+}

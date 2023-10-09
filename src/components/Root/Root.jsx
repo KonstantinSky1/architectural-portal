@@ -1,9 +1,6 @@
 import React from 'react'
 
-import { Header } from '../Header/Header'
-import { PageWrapper } from '../PageWrapper/PageWrapper'
-import { Footer } from '../Footer/Footer'
-
+import { Header, PageWrapper, Footer } from '../index'
 
 const Root = () => {
   return (

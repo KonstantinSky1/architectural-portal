@@ -3,9 +3,15 @@
 @import url('./vendor/fonts/fonts.css');
 
 :root {
-  --color-white: #fff;
-  --color-button-light: #03BCDB;
-  --color-button-darker: #363681;
+  --button-textcolor: #fff;
+  --color-buttonBg-light: #03BCDB;
+  --color-buttonBg-darker: #363681;
+  --border-radius-button: 6px;
+}
 
-  --maxWidthContainer1120: 1120px;
+.button {
+  color: var(--button-textcolor);
+  font-family: 'Montserrat';
+  border-radius: var(--border-radius-button);
+  cursor: pointer;
 }

@@ -8,7 +8,6 @@ const LogoLink = () => {
   return (
     <Link to='/'>
       <img
-        className='logoLink'
         src={headerLogo}
         alt='Логотип'
       />
