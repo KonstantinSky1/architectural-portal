@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import './Header.css'
 
 import { LogoLink, LogginedHeaderNavigation, NotLogginedHeaderNavigation, HeaderLangSelect } from '../index'
+import headerLogo from '../../images/header-logo.svg'
 
 const optionsLang = [
   { title: "KZ", value: "KZ" },
@@ -24,7 +25,9 @@ const Header = () => {
       <div className='header__container'>
         <div className='header__content'>
           <div className='header__logo'>
-            <LogoLink />
+            <LogoLink
+              logo={headerLogo}
+            />
           </div>
           <div className='header__navigation'>
             {/* В зависимости от того залогинен ли пользователь сделать примерно так: { isUserLoggined() ? <LogginedNavigation /> : <NotLogginedNavigation /> } */}

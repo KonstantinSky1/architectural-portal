@@ -9,6 +9,9 @@
   --border-radius-button: 6px;
   --text-color-darker: #000080;
   --text-color-dark: #1F1F1F;
+  --text-color-grey-light: #B5BBCA;
+  --container-big-width: 1526px;
+  --container-small-width: 1392px;
 }
 
 .button {
