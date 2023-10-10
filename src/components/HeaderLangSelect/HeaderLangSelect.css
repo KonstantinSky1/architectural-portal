@@ -1,0 +1,31 @@
+.select-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.arrow-lang-dropdown {
+  position: absolute;
+  right: 0;
+  top: -15%;
+  pointer-events: none;
+}
+
+.select-lang-menu {
+  position: absolute;
+  top: 30px;
+  left: -15px;
+  padding: 15px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 6px;
+  box-shadow: 0px 8.82143px 19.5px 0px rgba(140, 154, 187, 0.14);
+}
+
+.select-lang, .select-lang-menu {
+  color: var(--text-color-darker);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Montserrat';
+}

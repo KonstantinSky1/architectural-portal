@@ -4,9 +4,10 @@
 
 :root {
   --button-textcolor: #fff;
-  --color-buttonBg-light: #03BCDB;
+  --color-buttonBg-light: #4545AA;
   --color-buttonBg-darker: #363681;
   --border-radius-button: 6px;
+  --text-color-darker: #000080;
 }
 
 .button {
