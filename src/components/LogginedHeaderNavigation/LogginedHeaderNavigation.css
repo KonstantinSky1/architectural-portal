@@ -6,17 +6,23 @@
 .logginedHeaderNavigation__links {
   display: flex;
   gap: 30px;
+  margin-right: 50px;
+}
+
+.logginedHeaderNavigation__link {
   font-family: Montserrat;
   font-weight: 600;
   line-height: 148%;
-  color: var(--text-color-dark);
-  margin-right: 50px;
   opacity: 0.8;
+  color: var(--text-color-dark);
 }
 
 .logginedHeaderNavigation__download-template {
   margin-left: 5px;
   color: var(--text-color-darker);
+  font-family: Montserrat;
+  font-weight: 600;
+  line-height: 148%;
 }
 
 .logginedHeaderNavigation__icons {

@@ -12,8 +12,8 @@ const LogginedHeaderNavigation = () => {
   return (
     <div className='logginedHeaderNavigation'>
       <div className='logginedHeaderNavigation__links'>
-        <Link to='/'>Мои запросы</Link>
-        <Link to='/'>Помощь</Link>
+        <Link to='/'><span className='logginedHeaderNavigation__link'>Мои запросы</span></Link>
+        <Link to='/'><span className='logginedHeaderNavigation__link'>Помощь</span></Link>
         <Link to='/'>
           <img
             src={arrowDondLineIcon}

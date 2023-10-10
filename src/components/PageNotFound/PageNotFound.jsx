@@ -11,14 +11,14 @@ function PageNotFound() {
       <h2 className="pageNotFound__title">404</h2>
       <p className="pageNotFound__text">страница не найдена</p>
       <button
-        className="pageNotFound__button"
+        className="pageNotFound__button button"
         onClick={() => navigate(-1)}
         type="button"
       >
         Назад
       </button>
     </div>
-  );
+  )
 }
 
 export { PageNotFound }
