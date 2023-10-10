@@ -6,7 +6,7 @@
 }
 
 .begin-work__content {
-  padding: 135px 0 80px 0;
+  padding: 135px 10px 80px 10px;
   margin: 0 auto;
 }
 
@@ -42,10 +42,45 @@
 
 .begin-work__links {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   grid-template-areas:
   "globe . star"
   "tree calculator catalog";
   margin: 0 auto;
-  width: fit-content;
+  max-width: 1120px;
+}
+
+.inf-system__container {
+  max-width: var(--container-big-width);
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: right;
+}
+
+.inf-system__content {
+  max-width: var(--container-small-width);
+  padding: 90px 0 66px 0;
+  flex-grow: 1;
+}
+
+.inf-system__title-block {
+  margin-bottom: 77px;
+  display: flex;
+  gap: 17px;
+}
+
+.inf-system__title {
+  color: var(--text-color-dark);
+  white-space: nowrap;
+}
+
+.inf-system__line {
+  width: 100%;
+  max-width: 517px;
+  height: 1px;
+  background-color: var(--text-color-darker);
+  align-self: end;
+  margin-bottom: 12px;
 }

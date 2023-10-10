@@ -22,7 +22,8 @@
 
 .footer__links {
   display: flex;
-  gap: 60px;
+  justify-content: space-between;
+  max-width: 1260px;
   font-family: 'Montserrat';
   line-height: 148%;
 }

@@ -1,5 +1,5 @@
 .mainpage-link {
-  width: 360px;
+  max-width: 360px;
   height: 60px;
   background-color: #fff;
   display: flex;

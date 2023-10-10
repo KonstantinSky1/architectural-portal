@@ -18,7 +18,9 @@
 }
 
 .header__navigation {
-  margin-right: 40px;
+  margin-left: 10px;
+  max-width: 830px;
+  width: 100%;
 }
 
 .select-lang-wrapper {

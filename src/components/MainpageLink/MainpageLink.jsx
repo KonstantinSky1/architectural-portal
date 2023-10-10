@@ -8,7 +8,7 @@ const MainpageLink = ({ picture, path, text, gridArea }) => {
     <Link
       to={path}
       className='mainpage-link button'
-      style={{"grid-area": gridArea}}
+      style={{gridArea}}
     >
       <img
         src={picture}
