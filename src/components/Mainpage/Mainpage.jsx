@@ -69,6 +69,9 @@ const Mainpage = () => {
               <h2 className='inf-system__title title'>Информационные системы</h2>
               <div className='inf-system__line'></div>
             </div>
+            <div className='inf-system__content-block'>
+
+            </div>
           </div>
         </div>
       </section>

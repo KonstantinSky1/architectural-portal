@@ -84,3 +84,11 @@
   align-self: end;
   margin-bottom: 12px;
 }
+
+.inf-system__content-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1330px;
+  width: 100%;
+}
