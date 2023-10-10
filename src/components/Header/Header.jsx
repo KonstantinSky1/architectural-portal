@@ -28,7 +28,8 @@ const Header = () => {
           </div>
           <div className='header__navigation'>
             {/* В зависимости от того залогинен ли пользователь сделать примерно так: { isUserLoggined() ? <LogginedNavigation /> : <NotLogginedNavigation /> } */}
-            <NotLogginedHeaderNavigation />
+            {/* <NotLogginedHeaderNavigation /> */}
+            <LogginedHeaderNavigation />
           </div>
           <div className="select-lang-wrapper">
             <HeaderLangSelect

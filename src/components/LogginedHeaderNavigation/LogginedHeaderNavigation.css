@@ -1,0 +1,33 @@
+.logginedHeaderNavigation {
+  display: flex;
+  align-items: center;
+}
+
+.logginedHeaderNavigation__links {
+  display: flex;
+  gap: 30px;
+  font-family: Montserrat;
+  font-weight: 600;
+  line-height: 148%;
+  color: var(--text-color-dark);
+  margin-right: 50px;
+  opacity: 0.8;
+}
+
+.logginedHeaderNavigation__download-template {
+  margin-left: 5px;
+  color: var(--text-color-darker);
+}
+
+.logginedHeaderNavigation__icons {
+  display: flex;
+  gap: 35px;
+}
+
+.logginedHeaderNavigation__name {
+  font-family: Montserrat;
+  font-weight: 600;
+  line-height: 148%;
+  color: var(--text-color-dark);
+  opacity: 0.8;
+}
