@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 import './Mainpage.css'
@@ -9,10 +9,17 @@ import treeStructureIcon from '../../images/tree-structure-icon.svg'
 import calculatorIcon from '../../images/calculator-icon.svg'
 import starIcon from '../../images/star-icon.svg'
 import catalogIcon from '../../images/catalog-icon.svg'
+import notebookPic from '../../images/notebook-image.svg'
 
-import { MainpageLink } from '../index'
+import { MainpageLink, Post } from '../index'
+
+import { JsonPlaceholderContext } from '../../contexts/JsonPlaceholderContext'
 
 const Mainpage = () => {
+  const { posts } = useContext(JsonPlaceholderContext)
+
+  const postsSliced = posts.slice(0, 10)
+
   return (
     <>
       <section className='begin-work'>
@@ -70,7 +77,23 @@ const Mainpage = () => {
               <div className='inf-system__line'></div>
             </div>
             <div className='inf-system__content-block'>
-
+              <ul className='inf-system__list'>
+                {
+                  postsSliced.map((post) => (
+                    <Post
+                      key={post.id}
+                      post={post}
+                    />
+                  ))
+                }
+              </ul>
+              <div>
+                <img
+                  className='inf-system__image'
+                  src={notebookPic}
+                  alt='Ноутбук'
+                />
+              </div>
             </div>
           </div>
         </div>

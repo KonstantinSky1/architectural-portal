@@ -9,3 +9,5 @@ const getTestData = () => fetch(BASE_URL, {
     'Content-Type': 'application/json'
   }
 }).then(checkResponse)
+
+export { getTestData }
