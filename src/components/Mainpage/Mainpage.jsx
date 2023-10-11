@@ -13,7 +13,7 @@ import notebookPic from '../../images/notebook-image.svg'
 import arrowDownLineWhiteIcon from '../../images/arrow-line-down-white.svg'
 import diagramPic from '../../images/diagram.svg'
 
-import { MainpageLink, Post, CardTechnology } from '../index'
+import { MainpageLink, Post, CardTechnology, SideButton } from '../index'
 
 import { JsonPlaceholderContext } from '../../contexts/JsonPlaceholderContext'
 
@@ -159,6 +159,7 @@ const Mainpage = () => {
           </div>
         </div>
       </section>
+      <SideButton />
     </>
   )
 }
