@@ -34,6 +34,10 @@
   width: 100%;
 }
 
+.logginedHeaderNavigation__icons img {
+  cursor: pointer;
+}
+
 .logginedHeaderNavigation__name {
   max-width: 200px;
   width: 100%;
@@ -42,4 +46,5 @@
   line-height: 148%;
   color: var(--text-color-dark);
   opacity: 0.8;
+  cursor: pointer;
 }
