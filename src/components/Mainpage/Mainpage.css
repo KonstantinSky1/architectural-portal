@@ -66,9 +66,10 @@
 }
 
 .inf-system__title-block {
-  margin-bottom: 77px;
+  margin-bottom: 52px;
   display: flex;
   gap: 17px;
+  max-width: 1260px;
 }
 
 .inf-system__title {
@@ -78,7 +79,6 @@
 
 .inf-system__line {
   width: 100%;
-  max-width: 517px;
   height: 1px;
   background-color: var(--text-color-darker);
   align-self: end;
@@ -105,4 +105,71 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.often-used-tech {
+  background-color: #F7F4FC;
+}
+
+.often-used-tech__container {
+  max-width: var(--container-big-width);
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: right;
+}
+
+.often-used-tech__content {
+  max-width: var(--container-small-width);
+  padding: 90px 0 95px 0;
+  flex-grow: 1;
+}
+
+.often-used-tech__title-block {
+  margin-bottom: 62px;
+  display: flex;
+  gap: 17px;
+  max-width: 1260px;
+}
+
+.often-used-tech__title {
+  color: var(--text-color-dark);
+  white-space: nowrap;
+}
+
+.often-used-tech__line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-color-darker);
+  align-self: end;
+  margin-bottom: 12px;
+}
+
+.often-used-tech__content-block {
+  max-width: 1260px;
+}
+
+.often-used-tech__download-btn {
+  background-color: var(--color-buttonBg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 242px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.often-used-tech__content-block-diagram {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-technology-list {
+  max-width: 339px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

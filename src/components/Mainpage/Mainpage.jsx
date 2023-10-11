@@ -10,15 +10,16 @@ import calculatorIcon from '../../images/calculator-icon.svg'
 import starIcon from '../../images/star-icon.svg'
 import catalogIcon from '../../images/catalog-icon.svg'
 import notebookPic from '../../images/notebook-image.svg'
+import arrowDownLineWhiteIcon from '../../images/arrow-line-down-white.svg'
 
-import { MainpageLink, Post } from '../index'
+import { MainpageLink, Post, CardTechnology } from '../index'
 
 import { JsonPlaceholderContext } from '../../contexts/JsonPlaceholderContext'
 
+import { mockTechnology } from '../../utils/mockTechnology'
+
 const Mainpage = () => {
   const { posts } = useContext(JsonPlaceholderContext)
-
-  const postsSliced = posts.slice(0, 10)
 
   return (
     <>
@@ -79,7 +80,7 @@ const Mainpage = () => {
             <div className='inf-system__content-block'>
               <ul className='inf-system__list'>
                 {
-                  postsSliced.map((post) => (
+                  posts.slice(0, 10).map((post) => (
                     <Post
                       key={post.id}
                       post={post}
@@ -94,6 +95,59 @@ const Mainpage = () => {
                   alt='Ноутбук'
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='often-used-tech'>
+        <div className='often-used-tech__container'>
+          <div className='often-used-tech__content'>
+            <div className='often-used-tech__title-block'>
+              <h2 className='often-used-tech__title title'>Часто используемые технологии</h2>
+              <div className='often-used-tech__line'></div>
+            </div>
+            <div className='often-used-tech__content-block'>
+              <div className='often-used-tech__content-block-diagram'>
+                <ul className='card-technology-list'>
+                  {
+                    mockTechnology.slice(0, Math.floor(mockTechnology.length / 2)).map((card) => (
+                      <CardTechnology
+                        key={card.id}
+                        title={card.title}
+                        image={card.image}
+                        numberBgColor={card.numberBgColor}
+                        number={card.number}
+                      />
+                    ))
+                  }
+                </ul>
+                <div>
+                  Диаграма
+                </div>
+                <ul className='card-technology-list'>
+                  {
+                    mockTechnology.slice(Math.floor(mockTechnology.length / 2), mockTechnology.length).map((card) => (
+                      <CardTechnology
+                        key={card.id}
+                        title={card.title}
+                        image={card.image}
+                        numberBgColor={card.numberBgColor}
+                        number={card.number}
+                      />
+                    ))
+                  }
+                </ul>
+              </div>
+                <button
+                type='button'
+                className='often-used-tech__download-btn button'
+              >
+                <img
+                  src={arrowDownLineWhiteIcon}
+                  alt='Скачать'
+                />
+                <span>Cкачать</span>
+              </button>
             </div>
           </div>
         </div>
