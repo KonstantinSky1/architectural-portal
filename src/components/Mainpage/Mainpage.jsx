@@ -87,7 +87,7 @@ const Mainpage = () => {
                   ))
                 }
               </ul>
-              <div>
+              <div className='inf-system__image-block'>
                 <img
                   className='inf-system__image'
                   src={notebookPic}

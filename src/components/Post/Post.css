@@ -1,0 +1,36 @@
+.post-item {
+  background-color: #F5EFFF;
+  height: 66px;
+  border-radius: 6px;
+  border-bottom: 1px solid #F5EFFF;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 21px 30px;
+  cursor: pointer;
+}
+
+.post-item__number {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  color: var(--text-color-light);
+  background-color: var(--color-buttonBg-light);
+  border-radius: 255px;
+  height: 32px;
+  min-width: 48px;
+  text-align: center;
+}
+
+.post-item__title {
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 140%;
+  color: var(--text-color-darker);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: auto;
+}

@@ -89,15 +89,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 5px;
   max-width: 1330px;
   width: 100%;
 }
 
 .inf-system__image {
   max-width: 683px;
-  max-height: 683px;
+  width: 100%;
 }
 
 .inf-system__list {
-  
+  max-width: 478px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
