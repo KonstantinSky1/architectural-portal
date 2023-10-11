@@ -55,9 +55,7 @@
 }
 
 @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
+  font-family: 'Roboto Flex';
   font-display: swap;
-  src: url("./inter/Inter-Regular.ttf") format("truetype");
+  src: url("./robotoflex/RobotoFlex-VariableFont.ttf") format("truetype");
 }
