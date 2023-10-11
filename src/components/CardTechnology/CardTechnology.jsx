@@ -39,9 +39,12 @@ const imagesFields = {
   [images.HPPIC]: hpPic,
 }
 
-const CardTechnology = ({ title, image, numberBgColor, number }) => {
+const CardTechnology = ({ title, image, numberBgColor, number, style }) => {
   return (
-    <li className='card-technology'>
+    <li
+      className='card-technology'
+      style={{'flexDirection': style}}
+    >
       <p className='card-technology__text'>{title}</p>
       <img
         src={imagesFields[image]}

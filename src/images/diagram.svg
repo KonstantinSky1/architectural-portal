@@ -1,0 +1,45 @@
+<svg width="470" height="469" viewBox="0 0 470 469" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1379_5735)">
+<g filter="url(#filter0_d_1379_5735)">
+<circle cx="234.5" cy="243.161" r="209.581" fill="white"/>
+</g>
+<mask id="mask0_1379_5735" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="40" y="51" width="385" height="384">
+<path d="M40.8831 243.161C40.8831 348.988 126.673 434.778 232.5 434.778C338.327 434.778 424.117 348.988 424.117 243.161C424.117 137.334 338.327 51.5441 232.5 51.5441C126.673 51.5441 40.8831 137.334 40.8831 243.161Z" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1379_5735)">
+<path d="M232.716 243.161V64.1387C185.667 64.1387 140.51 82.6599 107.011 115.696L232.716 243.161Z" fill="#EB2D2F" stroke="#EB2D2F"/>
+<path d="M232.716 243.161L107.011 115.696C73.5123 148.733 54.3651 193.628 53.7111 240.672L232.716 243.161Z" fill="#9B5294"/>
+<path d="M232.716 243.161L53.7111 240.672C53.1049 284.279 68.4371 326.607 96.8292 359.71L232.716 243.161Z" fill="#5A81A8"/>
+<path d="M232.716 243.161L96.8292 359.71C122.994 390.217 158.664 411.031 198.096 418.804L232.716 243.161Z" fill="#DB9551"/>
+<path d="M232.716 243.161L198.096 418.804C234.187 425.918 271.594 421.74 305.228 406.841L232.716 243.161Z" fill="#AFD756"/>
+<path d="M232.716 243.161L305.228 406.841C338.861 391.941 367.088 367.041 386.068 335.53L232.716 243.161Z" fill="#33C1A0"/>
+<path d="M232.716 243.161L386.068 335.53C403.3 306.923 412.185 274.065 411.721 240.672L232.716 243.161Z" fill="#B977AC"/>
+<path d="M232.716 243.161L411.721 240.672C411.257 207.279 401.461 174.682 383.441 146.565L232.716 243.161Z" fill="#CF9BBD"/>
+<path d="M232.716 243.161L383.441 146.565C365.421 118.447 339.896 95.9307 309.75 81.5602L232.716 243.161Z" fill="#E6BFCE"/>
+<path d="M232.716 243.161L309.749 81.5602C285.689 70.0907 259.37 64.1387 232.716 64.1387V243.161Z" fill="#FF9FC4"/>
+<g style="mix-blend-mode:color-burn">
+<circle cx="234.5" cy="243.161" r="142.765" fill="#D9D9D9"/>
+</g>
+<g style="mix-blend-mode:color-burn">
+<circle cx="232.5" cy="243.161" r="101.092" fill="#D9D9D9"/>
+</g>
+<g style="mix-blend-mode:color-burn">
+<circle cx="234.5" cy="243.161" r="63.2957" fill="#D9D9D9"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_1379_5735" x="-75.0808" y="33.58" width="619.162" height="619.162" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="100"/>
+<feGaussianBlur stdDeviation="50"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0941176 0 0 0 0 0.0980392 0 0 0 0 0.270588 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1379_5735"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1379_5735" result="shape"/>
+</filter>
+<clipPath id="clip0_1379_5735">
+<rect width="470" height="469" fill="white"/>
+</clipPath>
+</defs>
+</svg>

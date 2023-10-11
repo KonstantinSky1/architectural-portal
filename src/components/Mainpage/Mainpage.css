@@ -173,3 +173,8 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.card-technology-list__diagram {
+  max-width: 470px;
+  width: 100%;
+}

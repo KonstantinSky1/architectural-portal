@@ -11,6 +11,7 @@ import starIcon from '../../images/star-icon.svg'
 import catalogIcon from '../../images/catalog-icon.svg'
 import notebookPic from '../../images/notebook-image.svg'
 import arrowDownLineWhiteIcon from '../../images/arrow-line-down-white.svg'
+import diagramPic from '../../images/diagram.svg'
 
 import { MainpageLink, Post, CardTechnology } from '../index'
 
@@ -117,12 +118,17 @@ const Mainpage = () => {
                         image={card.image}
                         numberBgColor={card.numberBgColor}
                         number={card.number}
+                        style={'row'}
                       />
                     ))
                   }
                 </ul>
                 <div>
-                  Диаграма
+                  <img
+                    src={diagramPic}
+                    alt='Диаграмма'
+                    className='card-technology-list__diagram'
+                  />
                 </div>
                 <ul className='card-technology-list'>
                   {
@@ -133,6 +139,7 @@ const Mainpage = () => {
                         image={card.image}
                         numberBgColor={card.numberBgColor}
                         number={card.number}
+                        style={'row-reverse'}
                       />
                     ))
                   }
