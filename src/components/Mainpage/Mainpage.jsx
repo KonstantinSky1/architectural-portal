@@ -118,7 +118,7 @@ const Mainpage = () => {
                         image={card.image}
                         numberBgColor={card.numberBgColor}
                         number={card.number}
-                        style={'row'}
+                        style={{style: 'row'}}
                       />
                     ))
                   }
@@ -139,7 +139,7 @@ const Mainpage = () => {
                         image={card.image}
                         numberBgColor={card.numberBgColor}
                         number={card.number}
-                        style={'row-reverse'}
+                        style={{style: 'row-reverse'}}
                       />
                     ))
                   }

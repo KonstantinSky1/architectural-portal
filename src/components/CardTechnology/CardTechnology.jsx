@@ -43,7 +43,7 @@ const CardTechnology = ({ title, image, numberBgColor, number, style }) => {
   return (
     <li
       className='card-technology'
-      style={{'flexDirection': style}}
+      style={{'flexDirection': style.style}}
     >
       <p className='card-technology__text'>{title}</p>
       <img
