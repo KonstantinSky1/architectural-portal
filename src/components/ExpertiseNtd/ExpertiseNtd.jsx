@@ -12,6 +12,25 @@ const TabContentInWork = () => {
   )
 }
 
+const TabContentToBeAgreed = () => {
+  return(
+    <div>
+      Содержимое Таба "На согласовании"
+    </div>
+  )
+}
+
+const tabContent = {
+  INWORK: 'inWork',
+  TOBEAGREED: 'toBeAgreed',
+}
+
+const tabContentFields = {
+  [tabContent.INWORK]: TabContentInWork,
+  [tabContent.TOBEAGREED]: TabContentToBeAgreed,
+
+}
+
 const ExpertiseNtd = () => {
   return (
     <>
