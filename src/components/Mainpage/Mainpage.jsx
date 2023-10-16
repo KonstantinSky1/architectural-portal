@@ -12,8 +12,11 @@ import catalogIcon from '../../images/catalog-icon.svg'
 import notebookPic from '../../images/notebook-image.svg'
 import arrowDownLineWhiteIcon from '../../images/arrow-line-down-white.svg'
 import diagramPic from '../../images/diagram.svg'
+import bookIcon from '../../images/book-icon.svg'
+import checkIcon from '../../images/check-icon.svg'
+import moneyIcon from '../../images/money-icon.svg'
 
-import { MainpageLink, Post, CardTechnology, SideButton } from '../index'
+import { MainpageLink, Post, CardTechnology, SideButton, AnimatedArrow } from '../index'
 
 import { JsonPlaceholderContext } from '../../contexts/JsonPlaceholderContext'
 import { CurrentUserContext } from '../../contexts/CurrentUserContext'
@@ -31,53 +34,106 @@ const Mainpage = () => {
           <h1 className='begin-work__title'>Архитектурный портал Электронного Правительства</h1>
           {
             isUserLoggined()
-              ? ''
-              : (
-                  <Link
-                    onClick={handleLoggined}
-                    to='/'
-                    className='begin-work__start-btn button'
-                  >
-                    <span>Начать работу</span>
-                    <img
-                      src={arrowRightIcon}
-                      alt='Начать работу'
+              ? (
+                  <div className='begin-work__links begin-work__links_loggined'>
+                    <MainpageLink
+                      picture={bookIcon}
+                      path='/'
+                      text='Учет сведений'
+                      gridArea='accounting'
                     />
-                  </Link>
+                    <div className='begin-work__links_arrow-loggined'>
+                      <AnimatedArrow />
+                      <MainpageLink
+                        picture={checkIcon}
+                        path='expertise'
+                        text='Экспертиза'
+                        gridArea='expertise'
+                      />
+                    </div>
+                    <MainpageLink
+                      picture={moneyIcon}
+                      path='/'
+                      text='Бюджет'
+                      gridArea='money'
+                    />
+                    <MainpageLink
+                      picture={globeIcon}
+                      path='/'
+                      text='ЦПЦП'
+                      gridArea='globe'
+                    />
+                    <MainpageLink
+                      picture={calculatorIcon}
+                      path='/'
+                      text='Калькулятор'
+                      gridArea='calculator'
+                    />
+                    <MainpageLink
+                      picture={catalogIcon}
+                      path='/'
+                      text='Дата каталог'
+                      gridArea='catalog'
+                    />
+                    <MainpageLink
+                      picture={starIcon}
+                      path='/'
+                      text='Оценка ГО'
+                      gridArea='star'
+                    />
+                  </div>
+                )
+              : (
+                <>
+                  <div className='begin-work__start-link-block'>
+                    <AnimatedArrow />
+                    <Link
+                      onClick={handleLoggined}
+                      to='/'
+                      className='begin-work__start-btn button'
+                    >
+                      <span>Начать работу</span>
+                      <img
+                        src={arrowRightIcon}
+                        alt='Начать работу'
+                      />
+                    </Link>
+                  </div>
+                  <div className='begin-work__links begin-work__links_not-loggined'>
+                    <MainpageLink
+                      picture={globeIcon}
+                      path='/'
+                      text='ЦПЦП'
+                      gridArea='globe'
+                    />
+                    <MainpageLink
+                      picture={starIcon}
+                      path='/'
+                      text='Оценка ГО'
+                      gridArea='star'
+                    />
+                    <MainpageLink
+                      picture={treeStructureIcon}
+                      path='/'
+                      text='Архитектура ЭП'
+                      gridArea='tree'
+                    />
+                    <MainpageLink
+                      picture={calculatorIcon}
+                      path='/'
+                      text='Калькулятор'
+                      gridArea='calculator'
+                    />
+                    <MainpageLink
+                      picture={catalogIcon}
+                      path='/'
+                      text='Дата каталог'
+                      gridArea='catalog'
+                    />
+                  </div>
+                </>
                 )
           }
-          <div className='begin-work__links'>
-            <MainpageLink
-              picture={globeIcon}
-              path='/'
-              text='ЦПЦП'
-              gridArea='globe'
-            />
-            <MainpageLink
-              picture={starIcon}
-              path='/'
-              text='Оценка ГО'
-              gridArea='star'
-            />
-            <MainpageLink
-              picture={treeStructureIcon}
-              path='/'
-              text='Архитектура ЭП'
-              gridArea='tree'
-            />
-            <MainpageLink
-              picture={calculatorIcon}
-              path='/'
-              text='Калькулятор'
-              gridArea='calculator'
-            />
-            <MainpageLink
-              picture={catalogIcon}
-              path='/'
-              text='Дата каталог'
-              gridArea='catalog'
-            />
-          </div>
         </div>
       </section>
       <section className='inf-system'>

@@ -22,6 +22,12 @@
   margin: 0 auto 144px;
 }
 
+.begin-work__start-link-block {
+  margin: 0 auto 64px;
+  position: relative;
+  width: fit-content;
+}
+
 .begin-work__start-btn {
   width: 286px;
   height: 60px;
@@ -33,7 +39,6 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 148%;
-  margin: 0 auto 64px;
 }
 
 .begin-work__start-btn span {
@@ -44,9 +49,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  grid-template-areas:
-  "globe . star"
-  "tree calculator catalog";
   margin: 0 auto;
   max-width: 1120px;
 }
@@ -159,6 +161,12 @@
   margin: 0 auto;
 }
 
+.often-used-tech__download-btn span {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
 .often-used-tech__content-block-diagram {
   margin-bottom: 12px;
   display: flex;
@@ -177,4 +185,22 @@
 .card-technology-list__diagram {
   max-width: 470px;
   width: 100%;
+}
+
+.begin-work__links_loggined {
+  grid-template-areas:
+  "accounting expertise money"
+  "globe calculator catalog"
+  ". star .";
+}
+
+.begin-work__links_not-loggined {
+  grid-template-areas:
+  "globe . star"
+  "tree calculator catalog";
+}
+
+.begin-work__links_arrow-loggined {
+  position: relative;
+  grid-area: expertise;
 }
