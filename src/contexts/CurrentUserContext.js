@@ -29,6 +29,12 @@ export const CurrentUserContextProvider = ({ children }) => {
 
   const isUserLoggined = () => loggedIn === loggedInMap.loggedIn
 
+  const handleLoggined = () => {
+    localStorage.setItem('isLoggined', 'loggedIn')
+
+    userLoggined()
+  }
+
   const handleSignOut = () => {
     localStorage.clear()
 
@@ -36,7 +42,7 @@ export const CurrentUserContextProvider = ({ children }) => {
   }
 
   return (
-    <CurrentUserContext.Provider value={{ isLoading, userLoggined, isUserLoggined }}>
+    <CurrentUserContext.Provider value={{ isLoading, userLoggined, isUserLoggined, handleSignOut, handleLoggined }}>
       {children}
     </CurrentUserContext.Provider>
     )

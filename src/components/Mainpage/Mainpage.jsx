@@ -22,13 +22,7 @@ import { mockTechnology } from '../../utils/mockTechnology'
 
 const Mainpage = () => {
   const { posts } = useContext(JsonPlaceholderContext)
-  const { userLoggined, isUserLoggined } = useContext(CurrentUserContext)
-
-  const handleLoggined = () => {
-    localStorage.setItem('isLoggined', 'loggedIn')
-
-    userLoggined()
-  }
+  const { handleLoggined, isUserLoggined } = useContext(CurrentUserContext)
 
   return (
     <>

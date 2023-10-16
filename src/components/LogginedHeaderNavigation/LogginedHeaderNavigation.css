@@ -12,7 +12,7 @@
 }
 
 .logginedHeaderNavigation__link {
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-weight: 600;
   line-height: 148%;
   opacity: 0.8;
@@ -22,7 +22,7 @@
 .logginedHeaderNavigation__download-template {
   margin-left: 5px;
   color: var(--text-color-darker);
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-weight: 600;
   line-height: 148%;
 }
@@ -41,10 +41,44 @@
 .logginedHeaderNavigation__name {
   max-width: 200px;
   width: 100%;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-weight: 600;
   line-height: 148%;
   color: var(--text-color-dark);
-  opacity: 0.8;
   cursor: pointer;
+  position: relative;
+}
+
+.menu-is-active {
+  display: none;
+}
+
+.logginedHeaderNavigation__name:hover .menu-is-active {
+  display: flex;
+}
+
+.logginedHeaderNavigation__name span {
+  opacity: 0.8;
+}
+
+.logginedHeaderNavigation-name-submenu-list {
+  position: absolute;
+  left: -45px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 6px;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 227px;
+  box-shadow: 0px 2px 20px 0px rgba(163, 173, 183, 0.20);
+}
+
+.logginedHeaderNavigation-name-submenu-logout {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logginedHeaderNavigation-name-submenu-logout span {
+  opacity: 0.8;
 }
