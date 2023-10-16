@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 
 import './Header.css'
 
-import { LogoLink, NotLogginedHeaderNavigation, HeaderLangSelect } from '../index'
-// import { LogginedHeaderNavigation } from '../index'
-
+import { LogoLink, NotLogginedHeaderNavigation, HeaderLangSelect, LogginedHeaderNavigation } from '../index'
 import headerLogo from '../../images/header-logo.svg'
+import { CurrentUserContext } from '../../contexts/CurrentUserContext'
 
 const optionsLang = [
   { title: "KZ", value: "KZ" },
@@ -15,6 +14,8 @@ const optionsLang = [
 
 const Header = () => {
   const [lang, setLangValue] = useState('KZ')
+
+  const { isUserLoggined } = useContext(CurrentUserContext)
 
   const selectedLang = optionsLang.find((item) => item.value === lang)
 
@@ -31,13 +32,19 @@ const Header = () => {
               logo={headerLogo}
             />
           </div>
-          {/* В зависимости от того залогинен ли пользователь: <LogginedHeaderNavigation /> или <NotLogginedHeaderNavigation /*/}
-          {/* <div className='header__navigation-login'>
-            <LogginedHeaderNavigation />
-          </div> */}
-          <div className='header__navigation-not-login'>
-            <NotLogginedHeaderNavigation />
-          </div>
+          {
+            isUserLoggined()
+              ? (
+                  <div className='header__navigation-login'>
+                    <LogginedHeaderNavigation />
+                  </div>
+                )
+              : (
+                  <div className='header__navigation-not-login'>
+                    <NotLogginedHeaderNavigation />
+                  </div>
+                )
+          }
           <div className="select-lang-wrapper">
             <HeaderLangSelect
               options={optionsLang}

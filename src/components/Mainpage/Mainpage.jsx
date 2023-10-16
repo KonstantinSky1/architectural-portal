@@ -16,27 +16,42 @@ import diagramPic from '../../images/diagram.svg'
 import { MainpageLink, Post, CardTechnology, SideButton } from '../index'
 
 import { JsonPlaceholderContext } from '../../contexts/JsonPlaceholderContext'
+import { CurrentUserContext } from '../../contexts/CurrentUserContext'
 
 import { mockTechnology } from '../../utils/mockTechnology'
 
 const Mainpage = () => {
   const { posts } = useContext(JsonPlaceholderContext)
+  const { userLoggined, isUserLoggined } = useContext(CurrentUserContext)
+
+  const handleLoggined = () => {
+    localStorage.setItem('isLoggined', 'loggedIn')
+
+    userLoggined()
+  }
 
   return (
     <>
       <section className='begin-work'>
         <div className='begin-work__content'>
           <h1 className='begin-work__title'>Архитектурный портал Электронного Правительства</h1>
-          <Link
-            to='/'
-            className='begin-work__start-btn button'
-          >
-            <span>Начать работу</span>
-            <img
-              src={arrowRightIcon}
-              alt='Начать работу'
-            />
-          </Link>
+          {
+            isUserLoggined()
+              ? ''
+              : (
+                  <Link
+                    onClick={handleLoggined}
+                    to='/'
+                    className='begin-work__start-btn button'
+                  >
+                    <span>Начать работу</span>
+                    <img
+                      src={arrowRightIcon}
+                      alt='Начать работу'
+                    />
+                  </Link>
+                )
+          }
           <div className='begin-work__links'>
             <MainpageLink
               picture={globeIcon}
