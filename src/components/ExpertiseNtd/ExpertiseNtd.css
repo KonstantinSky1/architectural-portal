@@ -1,3 +1,33 @@
 .expertisentd {
+  padding: 0 0 25px 0;
+}
 
+.expertisentd__bg-color {
+  padding: 30px 0 0 0;
+  background: linear-gradient(#f9f9fc , #fff);
+}
+
+.expertisentd__container {
+  max-width: var(--container-big-width);
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: right;
+}
+
+.expertisentd__content {
+  max-width: var(--container-small-width);
+  flex-grow: 1;
+}
+
+.expertisentd__inner-container {
+  max-width: 1260px;
+}
+
+.expertisentd__title-block {
+  margin-bottom: 35px;
+}
+
+.expertisentd__title {
+  color: var(--text-color-dark)
 }
