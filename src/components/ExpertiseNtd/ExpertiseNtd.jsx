@@ -1,37 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './ExpertiseNtd.css'
 
 import { SideButton, BreadCrumbs, TabsExpertise } from '../index'
+import { TabContentInWork } from '../TabContentInWork/TabContentInWork'
 
-const TabContentInWork = () => {
-  return(
-    <div>
-      Содержимое Таба "В работе"
-    </div>
-  )
-}
-
-const TabContentToBeAgreed = () => {
-  return(
-    <div>
-      Содержимое Таба "На согласовании"
-    </div>
-  )
-}
+const TabContentToBeAgreed = () => <div>Содержимое Таба "На согласовании"</div>
+const TabContentOnSignature = () => <div>Содержимое Таба "На подписи"</div>
+const TabContentOutgoing = () => <div>Содержимое Таба "Исходящие"</div>
+const TabContentArchive = () => <div>Содержимое Таба "Архив"</div>
 
 const tabContent = {
   INWORK: 'inWork',
   TOBEAGREED: 'toBeAgreed',
+  ONSIGNATURE: 'onSignature',
+  OUTGOING: 'outgoing',
+  ARCHIVE: 'archive',
 }
 
 const tabContentFields = {
-  [tabContent.INWORK]: TabContentInWork,
-  [tabContent.TOBEAGREED]: TabContentToBeAgreed,
-
+  [tabContent.INWORK]: <TabContentInWork />,
+  [tabContent.TOBEAGREED]: <TabContentToBeAgreed />,
+  [tabContent.ONSIGNATURE]: <TabContentOnSignature />,
+  [tabContent.OUTGOING]: <TabContentOutgoing />,
+  [tabContent.ARCHIVE]: <TabContentArchive />,
 }
 
 const ExpertiseNtd = () => {
+  const [toggleState, setToggleState] = useState('inWork')
+
+  const toggleTab = (tabNumber) => {
+    setToggleState(tabNumber)
+  }
+
   return (
     <>
       <section className='expertisentd'>
@@ -44,18 +45,22 @@ const ExpertiseNtd = () => {
                 />
                 <h1 className='expertisentd__title title'>Экспертиза НТД</h1>
               </div>
-              <div className='expertisentd__inner-container'>
-                <div className='expertisentd__tabs-block'>
-                  <TabsExpertise
-                    content={<TabContentInWork />}
-                  />
-                </div>
-
+            </div>
+          </div>
+        </div>
+        <div className='expertisentd__container'>
+          <div className='expertisentd__content'>
+            <div className='expertisentd__inner-container'>
+              <div className='expertisentd__tabs-block'>
+                <TabsExpertise
+                  content={tabContentFields[toggleState]}
+                  toggleState={toggleState}
+                  toggleTab={toggleTab}
+                />
               </div>
             </div>
           </div>
         </div>
-
       </section>
       <SideButton />
     </>

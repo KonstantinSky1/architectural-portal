@@ -1,16 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import './TabsExpertise.css'
 
 import plusIcon from '../../images/plus-icon.svg'
 
-const TabsExpertise = ({ content }) => {
-  const [toggleState, setToggleState] = useState('inWork')
-
-  const toggleTab = (tabNumber) => {
-    setToggleState(tabNumber)
-  }
-
+const TabsExpertise = ({ toggleState, toggleTab, content }) => {
   return (
     <div>
       <div className='block-tabs'>
