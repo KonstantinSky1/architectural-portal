@@ -1,6 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
+import { LocalizationProvider } from '@mui/x-date-pickers'
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import 'dayjs/locale/ru'
+
 import './index.css'
+
 import { App } from './components'
 import reportWebVitals from './reportWebVitals'
 import { JsonPlaceholderContextProvider } from './contexts/JsonPlaceholderContext'
@@ -11,7 +17,9 @@ root.render(
   <React.StrictMode>
     <CurrentUserContextProvider>
       <JsonPlaceholderContextProvider>
-        <App />
+        <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru">
+          <App />
+        </LocalizationProvider>
       </JsonPlaceholderContextProvider>
     </CurrentUserContextProvider>
   </React.StrictMode>
