@@ -71,6 +71,7 @@
   gap: 12px;
   min-width: 227px;
   box-shadow: 0px 2px 20px 0px rgba(163, 173, 183, 0.20);
+  z-index: 98;
 }
 
 .logginedHeaderNavigation-name-submenu-logout {

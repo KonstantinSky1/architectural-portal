@@ -21,6 +21,7 @@
   gap: 8px;
   border-radius: 6px;
   box-shadow: 0px 8.82143px 19.5px 0px rgba(140, 154, 187, 0.14);
+  z-index: 99;
 }
 
 .select-lang {
