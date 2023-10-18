@@ -53,8 +53,99 @@
   font-weight: 600;
 }
 
-.test .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input{
+/* Инпут выбора даты: */
+.datepicker-wrapper .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border: 1px solid rgba(114, 127, 161, 0.20);
+  border-radius: 8px;
+}
+
+.datepicker-wrapper .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-buttonBg-light);
+}
+
+.datepicker-wrapper .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-buttonBg-light);
+  border-width: 1px;
+}
+
+.datepicker-wrapper {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Календарь */
+/* Левая кнопка переключения месяца: */
+.css-kg9q0s-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button:hover {
+  background-color: transparent !important;
+}
+
+.css-kg9q0s-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button:hover svg g {
+  opacity: 1;
+}
+
+.css-kg9q0s-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button:hover svg g path {
+  fill: var(--color-buttonBg-light) !important;
+}
+
+/* Правая кнопка переключения месяца: */
+.css-1nkg345-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button:hover {
+  background-color: transparent !important;
+}
+
+.css-1nkg345-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button:hover svg g {
+  opacity: 1;
+}
+
+.css-1nkg345-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button:hover svg g path {
+  fill: var(--color-buttonBg-light) !important;
+}
+
+/* Кнопка выбора месяца: */
+.css-12mkn7b-MuiButtonBase-root-MuiIconButton-root-MuiPickersCalendarHeader-switchViewButton {
+  display: none !important;
+}
+
+/* Текст месяца: */
+.css-dplwbx-MuiPickersCalendarHeader-label {
+  color: var(--text-color-darker);
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.css-dplwbx-MuiPickersCalendarHeader-label::first-letter  {
+  text-transform: uppercase;
+}
+
+/* День недели: */
+.css-i5q14k-MuiDayCalendar-header span {
   color: #727FA1;
   font-family: 'Montserrat';
-  font-weight: 500;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Даты: */
+.css-flbe84-MuiDayCalendar-weekContainer button {
+  color: #363681;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 600;
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+}
+
+.css-1u23akw-MuiButtonBase-root-MuiPickersDay-root:hover {
+  background-color: var(--color-buttonBg-light) !important;
+  color: var(--button-textcolor);
+  border-radius: 6px !important;
+}
+
+.css-1u23akw-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+  background-color: var(--color-buttonBg-light) !important;
+  color: var(--button-textcolor);
+  border-radius: 6px !important;
 }
