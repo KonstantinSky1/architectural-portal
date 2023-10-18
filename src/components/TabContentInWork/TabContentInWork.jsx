@@ -154,6 +154,49 @@ const TabContentInWork = () => {
           }}
           pageSizeOptions={[5, 10, 25]}
           localeText={ruRU.components.MuiDataGrid.defaultProps.localeText}
+          disableRowSelectionOnClick
+          getRowClassName={(params) =>
+            params.indexRelativeToCurrentPage % 2 === 0 ? 'Mui-even' : 'Mui-odd'
+          }
+          rowHeight={66}
+          sx={{
+            border: 'none',
+            '&.MuiDataGrid-root .datagrid-header-style': {
+              color: '#B5BBCA',
+              fontFamily: 'Montserrat',
+              fontSize: '12px',
+              fontWeight: '600',
+            },
+            '&.MuiDataGrid-root .datagrid-cell-name-style': {
+              color: '#4545AA',
+            },
+            '&.MuiDataGrid-root .MuiDataGrid-row': {
+              color: '#727FA1',
+              fontFamily: 'Montserrat',
+              fontWeight: '600',
+            },
+            '&.MuiDataGrid-root .MuiDataGrid-cell': {
+              border: 'none !important',
+              whiteSpace: 'normal !important',
+              wordWrap: 'break-word !important',
+            },
+            '&.MuiDataGrid-root .MuiDataGrid-footerContainer': {
+              border: 'none !important',
+            },
+            '&.MuiDataGrid-root .MuiDataGrid-row:hover': {
+              backgroundColor: 'inherit'
+            },
+            '&.MuiDataGrid-root .Mui-odd': {
+              borderRadius: '6px',
+              backgroundColor: '#FAF8FD',
+            },
+            '&.MuiDataGrid-root .MuiDataGrid-cell:focus-within': {
+              outline: 'none !important',
+            },
+            '&.MuiDataGrid-root .MuiDataGrid-columnHeader:focus-within': {
+              outline: 'none !important',
+            },
+          }}
       />
       </div>
     </div>

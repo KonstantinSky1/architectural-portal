@@ -9,27 +9,33 @@ const useColumns = () => {
     {
       field: 'id',
       headerName: 'ID',
-      flex: 1,
+      width: 20,
+      headerClassName: 'datagrid-header-style'
     },
     {
       field: 'type',
       headerName: 'Тип',
-      flex: 1,
+      width: 160,
+      headerClassName: 'datagrid-header-style'
     },
     {
       field: 'name',
       headerName: 'Наименование',
-      flex: 1,
+      width: 300,
+      headerClassName: 'datagrid-header-style',
+      cellClassName: 'datagrid-cell-name-style'
     },
     {
       field: 'version',
       headerName: 'Версия',
-      flex: 1,
+      width: 90,
+      headerClassName: 'datagrid-header-style'
     },
     {
       field: 'owner',
       headerName: 'Владелец',
-      flex: 1,
+      width: 160,
+      headerClassName: 'datagrid-header-style'
     },
     {
       field: 'status',
@@ -37,12 +43,14 @@ const useColumns = () => {
       flex: 1,
       renderCell: (params) => params.value ? (<TableComponentYes />) : (<TableComponentNo />),
       type: 'boolean',
+      headerClassName: 'datagrid-header-style'
     },
     {
       field: 'date',
       headerName: 'Дата взятия в работу в УО',
-      flex: 1,
+      width: 200,
       renderCell: (params) => convertDateToHumanView(params.value),
+      headerClassName: 'datagrid-header-style'
     },
     {
       field: 'statusSI',
@@ -50,6 +58,7 @@ const useColumns = () => {
       flex: 1,
       renderCell: (params) => params.value ? (<TableComponentYes />) : (<TableComponentNo />),
       type: 'boolean',
+      headerClassName: 'datagrid-header-style'
     },
     {
       field: 'statusGTC',
@@ -57,6 +66,7 @@ const useColumns = () => {
       flex: 1,
       renderCell: (params) => params.value ? (<TableComponentYes />) : (<TableComponentNo />),
       type: 'boolean',
+      headerClassName: 'datagrid-header-style'
     },
   ]
 
