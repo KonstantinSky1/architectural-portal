@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
+import { DataGrid, ruRU } from '@mui/x-data-grid'
 
 import './TabContentInWork.css'
 
@@ -10,9 +11,16 @@ import { ReactComponent as datepickerIcon } from '../../images/datepicer-calenda
 import {  ReactComponent as rightArrowDatepickerIcon } from '../../images/right-arrow-datepicker-icon.svg'
 import {  ReactComponent as leftArrowDatepickerIcon } from '../../images/left-arrow-datepicker-icon.svg'
 
+import { generateTableData } from '../../utils/generateTableData'
+import { useColumns } from './tableSettings'
+
 const TabContentInWork = () => {
   const [startDate, setStartDate] = useState(null)
   const [finishDate, setFinishDate] = useState(null)
+
+  const tableTestData = generateTableData(100)
+
+  const { columns } = useColumns()
 
   return(
     <div className='tab-content-in-work'>
@@ -128,6 +136,26 @@ const TabContentInWork = () => {
           />
         </div>
       </form>
+      <div className='table-block'>
+        <DataGrid
+          columns={columns}
+          rows={tableTestData || []}
+          initialState={{
+              columns: {
+                  columnVisibilityModel: {
+                      id: false,
+                  },
+              },
+              pagination: {
+                  paginationModel: {
+                      pageSize: 10,
+                  },
+              },
+          }}
+          pageSizeOptions={[5, 10, 25]}
+          localeText={ruRU.components.MuiDataGrid.defaultProps.localeText}
+      />
+      </div>
     </div>
   )
 }
