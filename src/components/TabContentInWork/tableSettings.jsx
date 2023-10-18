@@ -36,6 +36,7 @@ const useColumns = () => {
       headerName: 'Статус',
       flex: 1,
       renderCell: (params) => params.value ? (<TableComponentYes />) : (<TableComponentNo />),
+      type: 'boolean',
     },
     {
       field: 'date',
@@ -48,12 +49,14 @@ const useColumns = () => {
       headerName: 'Cтатус СИ',
       flex: 1,
       renderCell: (params) => params.value ? (<TableComponentYes />) : (<TableComponentNo />),
+      type: 'boolean',
     },
     {
       field: 'statusGTC',
       headerName: 'Статус ГТС',
       flex: 1,
       renderCell: (params) => params.value ? (<TableComponentYes />) : (<TableComponentNo />),
+      type: 'boolean',
     },
   ]
 
