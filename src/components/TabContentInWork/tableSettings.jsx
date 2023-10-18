@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { convertDateToHumanView } from '../../utils/convertDateToHumanView'
+
 const useColumns = () => {
   const columns = [
     {
@@ -36,6 +38,7 @@ const useColumns = () => {
       field: 'date',
       headerName: 'Дата взятия в работу в УО',
       flex: 1,
+      renderCell: (params) => convertDateToHumanView(params.value)
     },
     {
       field: 'statusSI',
