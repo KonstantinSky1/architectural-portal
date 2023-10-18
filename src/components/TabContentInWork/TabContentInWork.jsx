@@ -5,6 +5,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import './TabContentInWork.css'
 
 import arrowUpSmallIcon from '../../images/arrow-up-small-icon.svg'
+import magnifierSmallIcon from '../../images/magnifier-small-icon.svg'
 import { ReactComponent as datepickerIcon } from '../../images/datepicer-calendar-icon.svg'
 import {  ReactComponent as rightArrowDatepickerIcon } from '../../images/right-arrow-datepicker-icon.svg'
 import {  ReactComponent as leftArrowDatepickerIcon } from '../../images/left-arrow-datepicker-icon.svg'
@@ -102,6 +103,31 @@ const TabContentInWork = () => {
           </button>
         </div>
       </div>
+      <p className='tab-content-in-work__title'>Запросы на экспертизу: В работе</p>
+      <form className='tab-content-in-work__search-blocks'>
+        <div className='tab-content-in-work__search-block tab-content-in-work__search-block_big'>
+          <img
+            src={magnifierSmallIcon}
+            alt='Лупа'
+          />
+          <input
+            type="text"
+            name="search-name"
+            placeholder="Наименование"
+          />
+        </div>
+        <div className='tab-content-in-work__search-block tab-content-in-work__search-block_small'>
+          <img
+            src={magnifierSmallIcon}
+            alt='Лупа'
+          />
+          <input
+            type="text"
+            name="search-version"
+            placeholder="Версия"
+          />
+        </div>
+      </form>
     </div>
   )
 }

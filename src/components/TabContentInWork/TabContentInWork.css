@@ -7,8 +7,8 @@
   width: 100%;
   border-radius: 6px;
   background: #F7F4FC;
-  padding: 0 18px 22px 18px;
   font-family: 'Montserrat';
+  margin-bottom: 27px;
 }
 
 .export-list-expertise__h-button {
@@ -35,12 +35,14 @@
   font-weight: 700;
   line-height: 120%;
   margin-bottom: 11px;
+  padding-left: 18px;
 }
 
 .export-list-expertise__dates-block {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 18px 22px 18px;
 }
 
 .export-list-expertise__export-btn {
@@ -148,4 +150,62 @@
   background-color: var(--color-buttonBg-light) !important;
   color: var(--button-textcolor);
   border-radius: 6px !important;
+}
+
+.css-jgls56-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+  background-color: var(--color-buttonBg-light) !important;
+  color: var(--button-textcolor);
+  border-radius: 6px !important;
+}
+
+.css-jgls56-MuiButtonBase-root-MuiPickersDay-root:hover {
+  border: none !important;
+  background-color: var(--color-buttonBg-light) !important;
+  color: var(--button-textcolor);
+  border-radius: 6px !important;
+}
+
+.tab-content-in-work__title {
+  color: #727FA1;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.tab-content-in-work__search-blocks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 48px;
+  max-width: 740px;
+  width: 100%;
+}
+
+.tab-content-in-work__search-block {
+  border-radius: 8px;
+  border: 1px solid rgba(114, 127, 161, 0.20);
+  background: #FFF;
+  padding: 0 22px 0 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+}
+
+.tab-content-in-work__search-block input {
+  color: #727FA1;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.tab-content-in-work__search-block_big {
+  width: 70%;
+}
+
+.tab-content-in-work__search-block_small {
+  width: 30%;
 }
