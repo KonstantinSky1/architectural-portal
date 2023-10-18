@@ -1,0 +1,32 @@
+.table-component-yes {
+  border: 2px solid #39C07F;
+}
+
+.table-component-yes span {
+  color: #39C07F;
+}
+
+.table-component-no {
+  border: 2px solid #BC0A54;
+}
+
+.table-component-no span {
+  color: #BC0A54;
+}
+
+.yes-no {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 6px;
+  background: #FFF;
+  width: 60px;
+  height: 30px;
+}
+
+.yes-no span {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 600;
+}
