@@ -46,6 +46,7 @@ const useColumns = () => {
       headerClassName: 'datagrid-header-style'
     },
     {
+      type: 'date',
       field: 'date',
       headerName: 'Дата взятия в работу в УО',
       width: 200,
