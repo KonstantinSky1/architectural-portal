@@ -9,7 +9,6 @@ const MainpageLink = ({ picture, path, text, gridArea, page }) => {
       to={path}
       className='mainpage-link button'
       style={{gridArea}}
-      state={page}
     >
       <img
         src={picture}

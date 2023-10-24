@@ -49,7 +49,6 @@ const Mainpage = () => {
                         path='expertise'
                         text='Экспертиза'
                         gridArea='expertise'
-                        page={{page: ['Экспертиза НТД']}}
                       />
                     </div>
                     <MainpageLink

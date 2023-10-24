@@ -6,6 +6,7 @@ import './ExpertiseNtd.css'
 
 import { SideButton, BreadCrumbs, TabsExpertise } from '../index'
 import { TabContentInWork } from '../TabContentInWork/TabContentInWork'
+import { pagesFields } from '../../utils/pageFields'
 
 const TabContentToBeAgreed = () => <div>Содержимое Таба "На согласовании"</div>
 const TabContentOnSignature = () => <div>Содержимое Таба "На подписи"</div>
@@ -44,11 +45,11 @@ const ExpertiseNtd = () => {
     setToggleState(tabNumber)
   }
 
-  const { state } = useLocation()
+  const location = useLocation()
 
   useEffect(() => {
-    state && state?.page.length && setPagesLocation([...state?.page, tabContentFieldsTitle[toggleState]])
-  }, [toggleState, state?.page, state])
+    setPagesLocation([...pagesFields[location.pathname], tabContentFieldsTitle[toggleState]])
+  }, [toggleState, location.pathname])
 
   return (
     <>
