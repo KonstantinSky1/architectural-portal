@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+
+import { useLocation } from 'react-router-dom'
 
 import './ExpertiseNtd.css'
 
@@ -26,12 +28,27 @@ const tabContentFields = {
   [tabContent.ARCHIVE]: <TabContentArchive />,
 }
 
+const tabContentFieldsTitle = {
+  [tabContent.INWORK]: 'В работе',
+  [tabContent.TOBEAGREED]: 'На согласовании',
+  [tabContent.ONSIGNATURE]: 'На подписи',
+  [tabContent.OUTGOING]: 'Исходящие',
+  [tabContent.ARCHIVE]: 'Архив',
+}
+
 const ExpertiseNtd = () => {
   const [toggleState, setToggleState] = useState('inWork')
+  const [pagesLocation, setPagesLocation] = useState([])
 
   const toggleTab = (tabNumber) => {
     setToggleState(tabNumber)
   }
+
+  const { state } = useLocation()
+
+  useEffect(() => {
+    state && state?.page.length && setPagesLocation([...state?.page, tabContentFieldsTitle[toggleState]])
+  }, [toggleState, state?.page, state])
 
   return (
     <>
@@ -42,6 +59,7 @@ const ExpertiseNtd = () => {
               <div className='expertisentd__title-block'>
                 <BreadCrumbs
                   style={{marginBottom: '15px'}}
+                  pages={pagesLocation}
                 />
                 <h1 className='expertisentd__title title'>Экспертиза НТД</h1>
               </div>

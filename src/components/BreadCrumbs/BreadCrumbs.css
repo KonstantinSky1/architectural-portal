@@ -1,0 +1,12 @@
+.bread-crumbs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bread-crumbs span {
+  color: #727FA1;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 500;
+}

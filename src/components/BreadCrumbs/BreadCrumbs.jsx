@@ -2,13 +2,34 @@ import React from 'react'
 
 import './BreadCrumbs.css'
 
-const BreadCrumbs = ({ style }) => {
+import homeBreadCrumbsIcon from '../../images/home-bread-crumbs-icon.svg'
+
+const BreadCrumbs = ({ style, pages = [] }) => {
   return (
     <div
-      className='bread-crumbs'
       style={style}
     >
-      Здесь будут "хлебные крошки"
+      {
+        (pages?.length > 0) && (
+          <div className='bread-crumbs'>
+            <img
+              src={homeBreadCrumbsIcon}
+              alt='Домой'
+            />
+            {
+              pages?.map((page, index) => (
+                <div
+                  className='bread-crumbs'
+                  key={index}
+                >
+                  <span>/</span>
+                  <span>{page}</span>
+                </div>
+              ))
+            }
+          </div>
+        )
+      }
     </div>
   )
 }

@@ -62,6 +62,8 @@
 .active-tabs {
   background-color: #FAF8FD;
   border-bottom: 3px solid var(--color-buttonBg-light);
+  pointer-events: none;
+  cursor: auto;
 }
 
 .active-tabs p {
