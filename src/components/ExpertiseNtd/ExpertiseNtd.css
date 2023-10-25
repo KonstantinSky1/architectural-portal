@@ -18,6 +18,7 @@
 .expertisentd__content {
   max-width: var(--container-small-width);
   flex-grow: 1;
+  width: 100%;
 }
 
 .expertisentd__inner-container {

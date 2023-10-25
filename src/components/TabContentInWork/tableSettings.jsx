@@ -21,7 +21,7 @@ const useColumns = () => {
     {
       field: 'name',
       headerName: 'Наименование',
-      width: 300,
+      flex: 1,
       headerClassName: 'datagrid-header-style',
       cellClassName: 'datagrid-cell-name-style'
     },
@@ -40,7 +40,7 @@ const useColumns = () => {
     {
       field: 'status',
       headerName: 'Статус',
-      flex: 1,
+      width: 90,
       renderCell: (params) => params.value ? (<TableComponentYes />) : (<TableComponentNo />),
       type: 'boolean',
       headerClassName: 'datagrid-header-style'
@@ -56,7 +56,7 @@ const useColumns = () => {
     {
       field: 'statusSI',
       headerName: 'Cтатус СИ',
-      flex: 1,
+      width: 90,
       renderCell: (params) => params.value ? (<TableComponentYes />) : (<TableComponentNo />),
       type: 'boolean',
       headerClassName: 'datagrid-header-style'
@@ -64,7 +64,7 @@ const useColumns = () => {
     {
       field: 'statusGTC',
       headerName: 'Статус ГТС',
-      flex: 1,
+      width: 90,
       renderCell: (params) => params.value ? (<TableComponentYes />) : (<TableComponentNo />),
       type: 'boolean',
       headerClassName: 'datagrid-header-style'
